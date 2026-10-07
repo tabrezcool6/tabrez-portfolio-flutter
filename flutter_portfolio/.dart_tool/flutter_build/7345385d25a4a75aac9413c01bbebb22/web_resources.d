@@ -1,0 +1,1 @@
+:  /Users/rokkun_mac_lap_21/Documents/syed\ docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/web/index.html
