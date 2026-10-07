@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'core/theme/apple_theme.dart';
-import 'presentation/views/home_page.dart';
+import 'presentation/views/portfolio_shell.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +19,7 @@ class TabrezPortfolioApp extends StatelessWidget {
       themeMode: ThemeMode.dark,
       darkTheme: AppleTheme.darkTheme,
       theme: AppleTheme.darkTheme,
-      home: const HomePage(),
+      home: const PortfolioShell(),
     );
   }
 }

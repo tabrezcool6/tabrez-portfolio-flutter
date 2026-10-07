@@ -25,6 +25,9 @@ class AppleNavbar extends StatelessWidget {
   final VoidCallback onOpenContact;
   final VoidCallback onToggleMenu;
 
+  /// Switches the page to the simple (non-technical) portfolio view.
+  final VoidCallback onSwitchView;
+
   const AppleNavbar({
     super.key,
     required this.scrolled,
@@ -32,6 +35,7 @@ class AppleNavbar extends StatelessWidget {
     required this.onNavigate,
     required this.onOpenContact,
     required this.onToggleMenu,
+    required this.onSwitchView,
   });
 
   @override
@@ -94,6 +98,7 @@ class AppleNavbar extends StatelessWidget {
                   Row(
                     spacing: 12,
                     children: [
+                      if (bp.sm) _SimpleViewButton(onTap: onSwitchView),
                       if (bp.sm) _GetInTouchButton(scrolled: scrolled, onTap: onOpenContact),
                       if (!bp.md)
                         Hover(
@@ -111,6 +116,43 @@ class AppleNavbar extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// "Simple view" switch (`px-3 py-1.5 text-xs rounded-full border-white/15`).
+class _SimpleViewButton extends StatelessWidget {
+  final VoidCallback onTap;
+  const _SimpleViewButton({required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: 'Switch to a simple, non-technical portfolio',
+      waitDuration: const Duration(milliseconds: 600),
+      child: Hover(
+        onTap: onTap,
+        builder: (context, hovered) {
+          final fg = hovered ? Tw.white : Tw.neutral300;
+          return AnimatedContainer(
+            duration: twDuration,
+            curve: twCurve,
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(999),
+              border: Border.all(color: Tw.w(hovered ? 0.3 : 0.15)),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              spacing: 6,
+              children: [
+                Icon(LucideIcons.layoutTemplate, size: 14, color: fg),
+                Text('Simple view', style: tw(TwSize.xs, weight: FontWeight.w500, color: fg)),
+              ],
+            ),
+          );
+        },
       ),
     );
   }
@@ -155,8 +197,9 @@ class _GetInTouchButton extends StatelessWidget {
 class MobileMenu extends StatelessWidget {
   final ValueChanged<String> onNavigate;
   final VoidCallback onOpenContact;
+  final VoidCallback onSwitchView;
 
-  const MobileMenu({super.key, required this.onNavigate, required this.onOpenContact});
+  const MobileMenu({super.key, required this.onNavigate, required this.onOpenContact, required this.onSwitchView});
 
   @override
   Widget build(BuildContext context) {
@@ -223,6 +266,26 @@ class MobileMenu extends StatelessWidget {
                             child: Text('Connect with Tabrez',
                                 style: tw(TwSize.sm, weight: FontWeight.w600, color: Tw.black)),
                           ),
+                        ),
+                      ),
+                    ),
+                    Hover(
+                      onTap: onSwitchView,
+                      builder: (context, hovered) => Container(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Tw.w(0.15)),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          spacing: 8,
+                          children: [
+                            Icon(LucideIcons.layoutTemplate, size: 16, color: hovered ? Tw.white : Tw.neutral200),
+                            Text('Switch to simple view',
+                                style: tw(TwSize.sm,
+                                    weight: FontWeight.w500, color: hovered ? Tw.white : Tw.neutral200)),
+                          ],
                         ),
                       ),
                     ),

@@ -49,6 +49,9 @@ file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/flutter_svg-2.3.0/lib/
 file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/flutter_svg-2.3.0/lib/src/utilities/compute.dart
 file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/flutter_svg-2.3.0/lib/src/utilities/file.dart
 file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/flutter_svg-2.3.0/lib/svg.dart
+file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.12.0/lib/font_awesome_flutter.dart
+file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.12.0/lib/src/fa_icon.dart
+file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.12.0/lib/src/icon_data.dart
 file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/google_fonts-6.3.3/lib/google_fonts.dart
 file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/google_fonts-6.3.3/lib/src/file_io.dart
 file:///Users/rokkun_mac_lap_21/.pub-cache/hosted/pub.dev/google_fonts-6.3.3/lib/src/google_fonts_all_parts.g.dart
@@ -694,9 +697,15 @@ file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-app
 file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/.dart_tool/flutter_build/7345385d25a4a75aac9413c01bbebb22/web_plugin_registrant.dart
 file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/.dart_tool/package_config.json
 file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/core/theme/apple_theme.dart
+file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/core/view_preference/view_preference.dart
+file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/core/view_preference/view_preference_web.dart
 file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/data/portfolio_data.dart
 file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/main.dart
+file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/presentation/simple/simple_page.dart
+file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/presentation/simple/simple_sections.dart
+file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/presentation/simple/simple_theme.dart
 file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/presentation/views/home_page.dart
+file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/presentation/views/portfolio_shell.dart
 file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/presentation/widgets/apple_footer.dart
 file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/presentation/widgets/apple_navbar.dart
 file:///Users/rokkun_mac_lap_21/Documents/syed%20docs/sameens/syed-portfolio-apple-theme/syed-tabrez-pasha-portfolio-flutter-v3/flutter_portfolio/lib/presentation/widgets/bento_grid_section.dart

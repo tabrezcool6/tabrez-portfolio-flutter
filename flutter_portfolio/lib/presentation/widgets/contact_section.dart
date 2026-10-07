@@ -128,7 +128,7 @@ class _ContactSectionState extends State<ContactSection> {
               title: 'Connect with Tabrez.',
               subtitle: "Let's build something remarkable.",
               body:
-                  "Whether you need a senior Flutter engineer, an architectural consultation, or a high-performance mobile app engineered from the ground up, I'm just a message away.",
+                  "Whether you need a Senior Flutter Engineer, an architectural consultation, or a high-performance mobile app engineered from the ground up, I'm just a message away.",
             ),
           ),
           if (bp.lg)
@@ -522,8 +522,18 @@ class _ProfileCard extends StatefulWidget {
 }
 
 class _ProfileCardState extends State<_ProfileCard> {
-  static final Future<bool> _photoExists =
-      rootBundle.load('assets/images/profile.png').then((_) => true, onError: (_) => false);
+  static final Future<bool> _photoExists = _checkPhoto();
+
+  // rootBundle.load throws synchronously when the asset isn't bundled, so
+  // both the sync throw and an async failure mean "no photo".
+  static Future<bool> _checkPhoto() async {
+    try {
+      await rootBundle.load('assets/images/profile.png');
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

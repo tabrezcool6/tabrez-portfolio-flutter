@@ -13,7 +13,9 @@ import '../widgets/projects_section.dart';
 
 /// Page shell mirroring src/App.tsx.
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  /// Switches the page to the simple (non-technical) portfolio view.
+  final VoidCallback onSwitchView;
+  const HomePage({super.key, required this.onSwitchView});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -109,6 +111,7 @@ class _HomePageState extends State<HomePage> {
               child: MobileMenu(
                 onNavigate: _scrollTo,
                 onOpenContact: _scrollToContact,
+                onSwitchView: widget.onSwitchView,
               ),
             ),
           Positioned(
@@ -121,6 +124,7 @@ class _HomePageState extends State<HomePage> {
               onNavigate: _scrollTo,
               onOpenContact: _scrollToContact,
               onToggleMenu: () => setState(() => _menuOpen = !_menuOpen),
+              onSwitchView: widget.onSwitchView,
             ),
           ),
         ],

@@ -13,6 +13,8 @@ dependencies:
   url_launcher: ^6.2.5
   lucide_icons_flutter: 3.0.9
   flutter_svg: ^2.2.0
+  font_awesome_flutter: ^10.7.0
+  web: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -23,3 +25,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/simple/

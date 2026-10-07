@@ -349,7 +349,7 @@ const List<SkillCategory> skillCategories = [
       SkillItem('Flutter', 'Expert', 'Production', 'Cross-platform reactive UI, widget composition, memory optimization, custom painters'),
       SkillItem('Dart', 'Expert', 'Production', 'Strong typing, async streams, null-safety, isolates, extension methods'),
       SkillItem('Native Android (Java)', 'Advanced', 'Native', 'Activity lifecycles, SQLite, Intents, XML layouts, Android SDK'),
-      SkillItem('Web Development (HTML, CSS, JS)', 'Advanced', 'Applied', 'Semantic HTML, responsive CSS layouts, vanilla JavaScript, DOM APIs, and cross-browser web pages'),
+      SkillItem('Web (HTML, CSS, JS)', 'Advanced', 'Applied', 'Semantic HTML, responsive CSS layouts, vanilla JavaScript, DOM APIs, and cross-browser web pages'),
     ],
   ),
   SkillCategory(
@@ -362,10 +362,12 @@ const List<SkillCategory> skillCategories = [
       SkillItem('GoRouter', 'Expert', 'Production', 'Declarative routing, deep linking, nested navigation, redirect auth guards, and state-driven transitions'),
       SkillItem('S.O.L.I.D Principles', 'Expert', 'Guiding Rule', 'Interface segregation, dependency inversion, testability'),
       SkillItem('GetIt (Service Locator)', 'Advanced', 'Production', 'Decoupled dependency injection, lazy singletons, factory registration'),
+      SkillItem('MVVM', 'Advanced', 'Production', 'View / ViewModel separation with observable state, testable presentation logic, and data-bound UIs'),
+      SkillItem('MVC', 'Advanced', 'Applied', 'Model / View / Controller layering for clear responsibilities in Android and web apps'),
     ],
   ),
   SkillCategory(
-    title: 'Data & Offline Persistence',
+    title: 'Data & Caching',
     subtitle: 'High-efficiency local and cloud data stores',
     items: [
       SkillItem('Hive NoSQL', 'Expert', 'Production', 'Lightweight binary key-value store, instant initialization, zero native dependencies'),
@@ -377,7 +379,7 @@ const List<SkillCategory> skillCategories = [
     ],
   ),
   SkillCategory(
-    title: 'Backend, Networking & Cloud',
+    title: 'Backend & Cloud',
     subtitle: 'APIs, real-time protocols, and serverless infrastructure',
     items: [
       SkillItem('Google Apps Script', 'Expert', 'Production', 'Serverless backend logic, automated catalog sync, shared PDF invoice generation, and REST endpoints'),
@@ -418,7 +420,19 @@ const List<SkillCategory> skillCategories = [
       SkillItem('Antigravity', 'Advanced', 'Daily Driver', 'Agent-first IDE for planning and executing multi-step coding tasks across the codebase'),
       SkillItem('Cursor', 'Advanced', 'Daily Driver', 'AI-native code editor with codebase-aware chat, inline edits, and multi-file refactors'),
       SkillItem('Windsurf', 'Advanced', 'Applied', 'Agentic IDE with context-aware code generation and iterative, multi-file edit flows'),
+      SkillItem('GitHub Copilot', 'Advanced', 'Daily Driver', 'Inline code completions, chat-driven edits, and boilerplate generation inside the IDE'),
+      SkillItem('Codex', 'Advanced', 'Applied', 'OpenAI coding agent for delegated tasks, code generation, and automated refactors'),
       SkillItem('Gemini 3.7 Flash', 'Advanced', 'Production', 'Low-latency chatbot model integration, prompt design, and API wiring for in-app AI assistants'),
+    ],
+  ),
+  SkillCategory(
+    title: 'Third Party Integrations',
+    subtitle: 'Identity, KYC, and credit integrations',
+    items: [
+      SkillItem('Shufti Pro KYC', 'Advanced', 'Production', 'Identity document and face verification, liveness checks, and verification result callbacks'),
+      SkillItem('Mawarid Finance Credit', 'Advanced', 'Production', 'Credit eligibility checks for tenants, applicant data submission, and decision status handling'),
+      SkillItem('UAE PASS Auth', 'Advanced', 'Production', 'National digital identity sign-in via OAuth 2.0 / OpenID Connect, app-to-app login, and verified user profile retrieval'),
+      SkillItem('TrySpare', 'Advanced', 'Production', 'Open banking and open finance integration: account information via IBAN and payment initiation APIs'),
     ],
   ),
 ];

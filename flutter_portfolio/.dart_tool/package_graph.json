@@ -9,9 +9,11 @@
       "dependencies": [
         "flutter",
         "flutter_svg",
+        "font_awesome_flutter",
         "google_fonts",
         "lucide_icons_flutter",
-        "url_launcher"
+        "url_launcher",
+        "web"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -41,6 +43,18 @@
         "stream_channel",
         "test_api",
         "vector_math"
+      ]
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "font_awesome_flutter",
+      "version": "10.12.0",
+      "dependencies": [
+        "flutter"
       ]
     },
     {
@@ -398,11 +412,6 @@
     {
       "name": "args",
       "version": "2.7.0",
-      "dependencies": []
-    },
-    {
-      "name": "web",
-      "version": "1.1.1",
       "dependencies": []
     },
     {
