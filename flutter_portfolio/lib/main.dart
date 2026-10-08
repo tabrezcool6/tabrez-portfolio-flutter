@@ -14,7 +14,7 @@ class TabrezPortfolioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Syed Tabrez — Portfolio',
+      title: 'Syed Tabrez - Portfolio',
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       darkTheme: AppleTheme.darkTheme,

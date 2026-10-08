@@ -44,13 +44,13 @@ class _PortfolioShellState extends State<PortfolioShell> {
           child: child,
         ),
         child: switch (_view) {
-          PortfolioView.apple => HomePage(
-              key: const ValueKey(PortfolioView.apple),
+          PortfolioView.developer => HomePage(
+              key: const ValueKey(PortfolioView.developer),
               onSwitchView: () => _switchTo(PortfolioView.simple),
             ),
           PortfolioView.simple => SimplePortfolioPage(
               key: const ValueKey(PortfolioView.simple),
-              onSwitchView: () => _switchTo(PortfolioView.apple),
+              onSwitchView: () => _switchTo(PortfolioView.developer),
             ),
         },
       ),
