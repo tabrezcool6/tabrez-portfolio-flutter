@@ -15,6 +15,34 @@ class CompareSection extends StatefulWidget {
 
 class _CompareSectionState extends State<CompareSection> {
   int _selected = 0;
+  final _tabScroll = ScrollController();
+  final _tabViewportKey = GlobalKey();
+  late final _tabKeys = List.generate(skillCategories.length, (_) => GlobalKey());
+
+  @override
+  void dispose() {
+    _tabScroll.dispose();
+    super.dispose();
+  }
+
+  void _select(int i) {
+    setState(() => _selected = i);
+    // On small screens, slide the tapped tab to the center of the strip.
+    if (Bp.of(context).md) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) => _centerTab(i));
+  }
+
+  void _centerTab(int i) {
+    if (!_tabScroll.hasClients) return;
+    final tab = _tabKeys[i].currentContext?.findRenderObject() as RenderBox?;
+    final viewport = _tabViewportKey.currentContext?.findRenderObject() as RenderBox?;
+    if (tab == null || viewport == null) return;
+    final tabCenter = tab.localToGlobal(tab.size.center(Offset.zero), ancestor: viewport).dx;
+    final delta = tabCenter - viewport.size.width / 2;
+    final position = _tabScroll.position;
+    final target = (position.pixels + delta).clamp(position.minScrollExtent, position.maxScrollExtent);
+    _tabScroll.animateTo(target, duration: const Duration(milliseconds: 300), curve: Curves.easeOutCubic);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +68,8 @@ class _CompareSectionState extends State<CompareSection> {
             spacing: 16,
             children: [
               SingleChildScrollView(
+                key: _tabViewportKey,
+                controller: _tabScroll,
                 scrollDirection: Axis.horizontal,
                 child: Container(
                   padding: const EdgeInsets.all(4),
@@ -53,7 +83,8 @@ class _CompareSectionState extends State<CompareSection> {
                     children: [
                       for (var i = 0; i < skillCategories.length; i++)
                         Hover(
-                          onTap: () => setState(() => _selected = i),
+                          key: _tabKeys[i],
+                          onTap: () => _select(i),
                           builder: (context, hovered) {
                             final active = i == _selected;
                             return AnimatedContainer(
